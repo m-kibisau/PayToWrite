@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayToWrite.Domain", "PayToWrite\PayToWrite.Domain.csproj", "{24EF8559-CB6C-49AC-BED1-DF0A85A1C6C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayToWrite.Domain", "PayToWrite\PayToWrite.Domain.csproj", "{24EF8559-CB6C-49AC-BED1-DF0A85A1C6C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayToWrite.Persistence", "PayToWrite.Persistence\PayToWrite.Persistence.csproj", "{D90EF871-7B5B-4AFF-9DC7-840EE3183021}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{24EF8559-CB6C-49AC-BED1-DF0A85A1C6C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24EF8559-CB6C-49AC-BED1-DF0A85A1C6C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24EF8559-CB6C-49AC-BED1-DF0A85A1C6C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90EF871-7B5B-4AFF-9DC7-840EE3183021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90EF871-7B5B-4AFF-9DC7-840EE3183021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90EF871-7B5B-4AFF-9DC7-840EE3183021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90EF871-7B5B-4AFF-9DC7-840EE3183021}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
