@@ -6,10 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="MediatR" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\PayToWrite.Persistence\PayToWrite.Persistence.csproj" />
+    <ProjectReference Include="..\PayToWrite\PayToWrite.Domain.csproj" />
   </ItemGroup>
 
 </Project>

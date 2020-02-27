@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PayToWrite.DTO.Application
+namespace PayToWrite.Application.DTO
 {
     public class MessagesDTO
     {

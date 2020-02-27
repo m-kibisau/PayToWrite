@@ -3,8 +3,13 @@ using PayToWrite.Domain;
 
 namespace PayToWrite.Persistence
 {
-    public class ApplicationContext : DbContext
+    public class MessageDbContext : DbContext
     {
+        public MessageDbContext(DbContextOptions<MessageDbContext> options)
+            : base(options)
+        {
+        }
+
         public DbSet<Users> Users { get; set; }
         public DbSet<Contacts> Contacts { get; set; }
         public DbSet<Chats> Chats { get; set; }
