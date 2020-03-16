@@ -10,10 +10,10 @@ namespace PayToWrite.Persistence
         {
         }
 
-        public DbSet<Users> Users { get; set; }
-        public DbSet<Contacts> Contacts { get; set; }
-        public DbSet<Chats> Chats { get; set; }
-        public DbSet<Members> Members { get; set; }
-        public DbSet<Messages> Messages { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Chat> Chats { get; set; }
+        public DbSet<Member> Members { get; set; }
+        public DbSet<Message> Messages { get; set; }
     }
 }

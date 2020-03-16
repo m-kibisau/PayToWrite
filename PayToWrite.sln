@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayToWrite.Persistence", "P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayToWrite.Application", "PayToWrite.Application\PayToWrite.Application.csproj", "{C64134F5-E0BF-4007-B749-1B327DA8AD25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayToWrite.Api", "PayToWrite.Api\PayToWrite.Api.csproj", "{84CB054F-8CB6-444B-B3A0-35602DB5A915}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayToWrite.Api", "PayToWrite.Api\PayToWrite.Api.csproj", "{84CB054F-8CB6-444B-B3A0-35602DB5A915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayToWrite.XUnitTest", "PayToWrite.XUnitTest\PayToWrite.XUnitTest.csproj", "{E4B7DBF8-1801-4732-8C77-F6F260EB1898}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{84CB054F-8CB6-444B-B3A0-35602DB5A915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84CB054F-8CB6-444B-B3A0-35602DB5A915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84CB054F-8CB6-444B-B3A0-35602DB5A915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B7DBF8-1801-4732-8C77-F6F260EB1898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B7DBF8-1801-4732-8C77-F6F260EB1898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B7DBF8-1801-4732-8C77-F6F260EB1898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B7DBF8-1801-4732-8C77-F6F260EB1898}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

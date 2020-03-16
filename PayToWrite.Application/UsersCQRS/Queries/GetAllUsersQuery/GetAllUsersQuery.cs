@@ -6,7 +6,7 @@ using PayToWrite.Domain;
 
 namespace PayToWrite.Application.UsersCQRS.Queries.GetAllUsersQuery
 {
-    class GetAllUsersQuery : IRequest<IEnumerable<Users>>
+    public class GetAllUsersQuery : IRequest<IEnumerable<User>>
     {
     }
 }

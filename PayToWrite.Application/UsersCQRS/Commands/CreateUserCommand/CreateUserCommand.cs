@@ -6,7 +6,7 @@ using PayToWrite.Application.DTO;
 
 namespace PayToWrite.Application.UsersCQRS.Commands.CreateUserCommand
 {
-    class CreateUserCommand:IRequest<string>
+    public class CreateUserCommand:IRequest<string>
     {
         public UsersDTO UsersDTO { get; set; }
     }

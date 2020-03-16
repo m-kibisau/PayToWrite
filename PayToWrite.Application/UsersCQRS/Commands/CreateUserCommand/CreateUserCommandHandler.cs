@@ -11,19 +11,19 @@ using AutoMapper;
 
 namespace PayToWrite.Application.UsersCQRS.Commands.CreateUserCommand
 {
-    class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, string>
+    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, string>
     {
-        private readonly IRepository<Users> _repository;
-        public CreateUserCommandHandler(IRepository<Users> repository)
+        private readonly IRepository<User> _repository;
+        public CreateUserCommandHandler(IRepository<User> repository)
         {
             _repository = repository;
         }
 
         public async Task<string> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Users, UsersDTO>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<User, UsersDTO>());
             var mapper = new Mapper(config);
-            var user = mapper.Map<Users>(request.UsersDTO);
+            var user = mapper.Map<User>(request.UsersDTO);
             await _repository.CreateAsync(user);
             return user.Login;
         }

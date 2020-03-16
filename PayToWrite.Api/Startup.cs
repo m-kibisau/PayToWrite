@@ -14,7 +14,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MediatR;
+using PayToWrite.Domain;
 using PayToWrite.Persistence;
+using PayToWrite.Application.UsersCQRS.Queries.GetAllUsersQuery;
 
 namespace PayToWrite.Api
 {
@@ -31,12 +34,13 @@ namespace PayToWrite.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MessageDbContext>(opt =>
-        opt.UseSqlServer(Configuration.GetConnectionString("MessageDB")));
+                opt.UseSqlServer(Configuration.GetConnectionString("MessageDB")));
+
+            services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>)); 
+            services.AddMediatR(typeof(GetAllUsersQueryHadler).Assembly);
+
             services.AddControllers();
-            /*services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-            });*/
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -73,10 +77,8 @@ namespace PayToWrite.Api
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                c.RoutePrefix = string.Empty;
-            });
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1")
+            );
 
             
 

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace PayToWrite.Domain
 {
-    public class Members
+    public class Member
     {
         public long ChatID { get; set; }
-        public string User_Login { get; set; }
+        public long User_Login { get; set; }
 
-        public Users Users { get; set; }
-        public Chats Chats { get; set; }
+        public User Users { get; set; }
+        public Chat Chats { get; set; }
     }
 }
