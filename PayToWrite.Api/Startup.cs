@@ -34,10 +34,11 @@ namespace PayToWrite.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MessageDbContext>(opt =>
-                opt.UseSqlServer(Configuration.GetConnectionString("MessageDB")));
+                opt.UseSqlServer("Server=WIN-DJ7BKF378VN\\SQLExpress;Database=MessageDB;Trusted_Connection=True;"));
 
-            services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>)); 
-            services.AddMediatR(typeof(GetAllUsersQueryHadler).Assembly);
+            services.AddScoped(typeof(DbContext), typeof(MessageDbContext));
+            services.AddScoped(typeof(IRepository<User>), typeof(DbRepository<User>)); 
+            services.AddMediatR(typeof(GetAllUsersQuery).GetTypeInfo().Assembly, typeof(GetAllUsersQueryHadler).GetTypeInfo().Assembly);
 
             services.AddControllers();
 

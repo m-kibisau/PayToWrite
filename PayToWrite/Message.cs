@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PayToWrite.Domain
 {
-    public class Message
+    public partial class Message
     {
         public long ID { get; set; }
         public long ChatID { get; set; }

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PayToWrite.Domain
 {
-    public class Contact
+    public partial class Contact
     {
         public long User1 { get; set; }
         public long User2 { get; set; }

@@ -2,7 +2,7 @@
 
 namespace PayToWrite.Domain
 {
-    public class User
+    public partial class User
     {
         public long ID { get; set; }
         public string Login { get; set; }
@@ -20,11 +20,11 @@ namespace PayToWrite.Domain
 
         public User()
         {
-            Contacts = new List<Contact>();
-            Contacts1 = new List<Contact>();
-            Chats = new List<Chat>();
-            Members = new List<Member>();
-            Messages = new List<Message>();
+            Contacts = new HashSet<Contact>();
+            Contacts1 = new HashSet<Contact>();
+            Chats = new HashSet<Chat>();
+            Members = new HashSet<Member>();
+            Messages = new HashSet<Message>();
         }
     }
 }
