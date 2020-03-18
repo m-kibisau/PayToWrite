@@ -18,7 +18,6 @@ namespace PayToWrite.Api.Controllers
         private readonly IMediator _mediator;
         private readonly ILogger<UserController> _logger;
 
-
         public UserController(ILogger<UserController> logger, IMediator mediator)
         {
             _logger = logger;

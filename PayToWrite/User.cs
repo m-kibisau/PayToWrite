@@ -12,19 +12,19 @@ namespace PayToWrite.Domain
         public string Phone { get; set; }
         public decimal Bill { get; set; }
 
-        public ICollection<Contact> Contacts { get; set; }
-        public ICollection<Contact> Contacts1 { get; set; }
-        public ICollection<Chat> Chats { get; set; }
-        public ICollection<Member> Members { get; set; }
-        public ICollection<Message> Messages { get; set; }
+        public List<Contact> Contacts { get; set; }
+        public List<Contact> Contacts1 { get; set; }
+        public List<Chat> Chats { get; set; }
+        public List<Member> Members { get; set; }
+        public List<Message> Messages { get; set; }
 
-        public User()
+        /*public User()
         {
-            Contacts = new HashSet<Contact>();
-            Contacts1 = new HashSet<Contact>();
-            Chats = new HashSet<Chat>();
-            Members = new HashSet<Member>();
-            Messages = new HashSet<Message>();
-        }
+            Contacts = new List<Contact>();
+            Contacts1 = new List<Contact>();
+            Chats = new List<Chat>();
+            Members = new List<Member>();
+            Messages = new List<Message>();
+        }*/
     }
 }

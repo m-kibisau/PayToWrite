@@ -12,13 +12,13 @@ namespace PayToWrite.Domain
 
         public virtual User Users { get; set; }
 
-        public ICollection<Member> Members { get; set; }
-        public ICollection<Message> Messages { get; set; }
+        public List<Member> Members { get; set; }
+        public List<Message> Messages { get; set; }
 
-        public Chat()
+        /*public Chat()
         {
-            Members = new HashSet<Member>();
-            Messages = new HashSet<Message>();
-        }
+            Members = new List<Member>();
+            Messages = new List<Message>();
+        }*/
     }
 }
